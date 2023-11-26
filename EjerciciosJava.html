@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <script>
+
+        function Ejercicio1 () {
+            var saludo = prompt ("Dame tu nombre")
+            
+            alert("¡Hola muy buenas " + saludo + "!");
+        }
+        function Ejercicio2 () {
+            var num1 = parseInt(prompt("Dame un numero para sumar"));
+            var num2 = parseInt(prompt("Dame otro numero para sumar"));
+            
+            alert(num1 + num2);
+        }
+        function Ejercicio3 () {
+            var Edad = prompt ("¿Cuantos años tienes?")
+            if(Edad > 18){
+                alert("¡Usted es mayor de Edad!");  
+            } else {
+                alert("¡Usted es menor de Edad!"); 
+            }
+        }
+        function Ejercicio4 () {
+            for(var i = 0; i < 11; i++){
+                alert(i)
+            }
+        }
+        function Ejercicio5 () {
+            var num1 = parseInt(prompt("Dame un numero para hacer la multiplicación factorial"));
+            operación = 1
+            for(var i = 2; i <= num1; i++){
+                operación *= i;
+            }
+            alert("El factorial de " + num1 + " es " + operación);
+        }
+
+        function Ejercicio6 () {
+            var listacompra = [];
+            for(var i = 0; i < 5; i++){
+                var producto = prompt("Dame un producto para añadir a la lista de la compra:");
+                listacompra.push(producto);
+            }
+            alert("Tu lista de la compra sería " + listacompra);
+        }
+        function Ejercicio7 () {
+            var num1 = parseInt(prompt("Dame un numero para saber si es par o impar"));
+
+            for (var i = 1; i <= 10; i++) {
+            if (num1 % 2 == 0) {
+                alert("El numero " + num1 + " es par");
+            } else {
+                alert("El numero " + num1 + " es impar");
+            }
+            }
+        }
+        function Ejercicio8 () {
+            var contraseña = prompt("¿Tu contraseña tiene más de 6 caracteres?");
+            if(contraseña.length > 6){
+                alert("¡Tu contraseña es valida!");
+            }else{
+                alert("¡Tu contraseña debe de tener más de 6 caracteres!");
+            }
+        }
+        function Ejercicio9 () {
+            var numaleatorio = Math.floor(Math.random()*10+1);
+            for(var intentar = 3; intentar > 0; intentar-- ){
+                var adivinar = parseInt(prompt("¿Podras adivinar el número del 1 al 10?"));
+                if(adivinar === numaleatorio){
+                    alert("¡Felicidades adivinaste el número!");
+                    break;
+                }else{
+                    alert("¡Ese no era el número a adivinar! ");
+                    alert("¡Animo todavía te quedan " + intentar + " intentos!");
+                }
+                }
+                if(intentar === 0){
+                    alert("Sin más intentos, tu numero aleatorio era " + numaleatorio);
+                    alert("¡Intentalo de nuevo!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick=" Ejercicio1 ()" value="Saludo Personalizado"/>
+  
+    <input type="button" onclick=" Ejercicio2 ()" value="Sumar numeros"/>
+
+    <input type="button" onclick=" Ejercicio3 ()" value="Verificador de Edad"/>
+
+    <input type="button" onclick=" Ejercicio4 ()" value="Contador"/>
+
+    <input type="button" onclick=" Ejercicio5 ()" value="Multiplicación Factorial"/>
+
+    <input type="button" onclick=" Ejercicio6 ()" value="Lista de la compra"/>
+
+    <input type="button" onclick=" Ejercicio7 ()" value="Numeros Impares"/>
+
+    <input type="button" onclick=" Ejercicio8 ()" value="Validador de contraseña"/>
+
+    <input type="button" onclick=" Ejercicio9 ()" value="Adivina el número"/>
+
+</body>
+</html>
